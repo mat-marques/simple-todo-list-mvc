@@ -25,8 +25,6 @@ export default class TodoView extends Observer {
         </div>
         <div id="todo-list">
             <ul>
-              <li>Fazer compras</li>
-              <li>Fazer compras...............................................</li>
             </ul>
         </div>
         `;

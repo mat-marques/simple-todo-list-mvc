@@ -3,6 +3,47 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#title h1 {
+  width: 400px;
+  position: relative;
+}
+
+#title h1::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 60px;
+  width: 0;
+  height: 20px;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+}
+
+#title h1::after {
+  animation: borderanimation 1s linear forwards;
+}
+
+@keyframes borderanimation {
+  0% {
+    width: 0;
+    border-bottom-color: black;
+  }
+  50% {
+    width: 140px;
+    border-bottom-color: black;
+  }
+  100% {
+    width: 290px;
+    border-bottom-color: black;
+  }
+}
+
 h1 {
   text-align: center;
   font-size: 45px;
