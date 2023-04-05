@@ -1,0 +1,110 @@
+body {
+  background-color: dimgray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#title h1 {
+  width: 400px;
+  position: relative;
+}
+
+#title h1::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 60px;
+  width: 0;
+  height: 20px;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+}
+
+#title h1::after {
+  animation: borderanimation 1s linear forwards;
+}
+
+@keyframes borderanimation {
+  0% {
+    width: 0;
+    border-bottom-color: black;
+  }
+  50% {
+    width: 140px;
+    border-bottom-color: black;
+  }
+  100% {
+    width: 290px;
+    border-bottom-color: black;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+}
+
+#add-todo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#add-todo div {
+  width: 100%;
+  text-align: center;
+}
+
+#add-todo div input,
+#add-todo div button {
+  width: 400px;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#add-todo div button {
+  width: 412px;
+  background-color: #228b22;
+  height: auto;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#todo-list ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+#todo-list ul li {
+  width: 400px;
+  word-break: break-word;
+  white-space: pre-line;
+  border: 1px solid black;
+  border-radius: 8px;
+  min-height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding: 5px;
+  margin: 5px;
+  background-color: #708090;
+  font-size: 16px;
+}
